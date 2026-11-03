@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="600.0" prefWidth="750.0" spacing="15.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.fintech.vistas.OperacionesController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <Label style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Procesar Transacciones en Tiempo Real" />
+      <GridPane hgap="10.0" vgap="12.0">
+         <children>
+            <Label text="Tipo de Operación:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <ComboBox fx:id="comboTipoOp" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            
+            <Label text="Billetera Origen ID:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="txtOrigen" promptText="Ej: B001" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            
+            <Label text="Billetera Destino ID:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="txtDestino" promptText="Ej: B002" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            
+            <Label text="Monto ($):" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="txtMonto" promptText="0.00" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <HBox spacing="15.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleEjecutarOperacion" style="-fx-background-color: #2e7d32; -fx-text-fill: white;" text="Ejecutar Operación" />
+            <Button mnemonicParsing="false" onAction="#handleRevertirOperacion" style="-fx-background-color: #c62828; -fx-text-fill: white;" text="Revertir Última Operación (Pila LIFO)" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
