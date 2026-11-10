@@ -5,7 +5,14 @@
             "type": "java",
             "name": "Ejecutar Fintech",
             "request": "launch",
-            "mainClass": "main.java.fintech.Launcher",
+            "mainClass": "fintech.Launcher",
+            "vmArgs": "--module-path \"C:/Users/vmoa2/OneDrive/Documentos/javafx-sdk-27.0.1/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "MainApp",
+            "request": "launch",
+            "mainClass": "fintech.MainApp",
             "vmArgs": "--module-path \"C:/Users/vmoa2/OneDrive/Documentos/javafx-sdk-27.0.1/lib\" --add-modules javafx.controls,javafx.fxml"
         }
     ]

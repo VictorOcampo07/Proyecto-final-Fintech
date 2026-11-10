@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="600.0" prefWidth="750.0" spacing="10.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.fintech.vistas.NotificacionesController">
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+   <children>
+      <HBox alignment="CENTER_LEFT" spacing="15.0">
+         <children>
+            <Label style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Centro de Notificaciones y Alertas" />
+            <HBox HBox.hgrow="ALWAYS" />
+            <Label text="Filtrar por Usuario:" />
+            <ComboBox fx:id="comboUsuarios" onAction="#handleSeleccionarUsuario" prefWidth="200.0" />
+         </children>
+      </HBox>
+      <ListView fx:id="listNotificaciones" VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>

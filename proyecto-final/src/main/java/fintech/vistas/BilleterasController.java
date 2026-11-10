@@ -1,8 +1,8 @@
-package main.java.fintech.vistas;
+package fintech.vistas;
 
-import main.java.fintech.modelo.Billetera;
-import main.java.fintech.modelo.PlataformaFintech;
-import main.java.fintech.modelo.Usuario;
+import fintech.modelo.Billetera;
+import fintech.modelo.PlataformaFintech;
+import fintech.modelo.Usuario;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

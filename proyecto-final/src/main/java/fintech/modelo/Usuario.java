@@ -1,4 +1,4 @@
-package main.java.fintech.modelo;
+package fintech.modelo;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,6 +1,6 @@
-package main.java.fintech.vistas;
+package fintech.vistas;
 
-import main.java.fintech.modelo.PlataformaFintech;
+import fintech.modelo.PlataformaFintech;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;

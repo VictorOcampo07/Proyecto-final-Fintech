@@ -1,6 +1,7 @@
-package main.java.fintech.vistas;
+package fintech.vistas;
 
-import main.java.fintech.modelo.PlataformaFintech;
+import fintech.modelo.PlataformaFintech;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.BorderPane;
@@ -38,5 +39,49 @@ public class MainWindowController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    private void abrirVistaAnalitica() {
+    try {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vistas/VistaAnalitica.fxml"));
+        Parent root = loader.load();
+
+        AnaliticaController controller = loader.getController();
+        controller.setFintech(this.fintech);
+
+        mainContainer.setCenter(root);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+
+    @FXML
+    private void abrirVistaNotificaciones() {
+    try {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vistas/VistaNotificaciones.fxml"));
+        Parent root = loader.load();
+
+        NotificacionesController controller = loader.getController();
+        controller.setFintech(this.fintech);
+
+        mainContainer.setCenter(root);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+    @FXML
+    private void handleEjecutarOperacion(){
+        System.out.println("Ejecutando operación desde MainWindowController");
+    }
+    @FXML
+    private void handleRevertirOperacion(ActionEvent event) {
+       
+        System.out.println("Operación revertida.");
+    }
+    @FXML
+    private void handleGenerarReporte(ActionEvent event) {
+        
+        System.out.println("Reporte generado.");
     }
 }

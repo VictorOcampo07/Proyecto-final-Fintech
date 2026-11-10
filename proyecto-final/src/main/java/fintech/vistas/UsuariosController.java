@@ -1,4 +1,4 @@
-package main.java.fintech.vistas;
+package fintech.vistas;
 
 import fintech.modelo.PlataformaFintech;
 import fintech.modelo.Usuario;

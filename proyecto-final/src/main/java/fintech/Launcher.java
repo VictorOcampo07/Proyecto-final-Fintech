@@ -1,4 +1,4 @@
-package main.java.fintech;
+package fintech;
 
 import javafx.application.Application;
 

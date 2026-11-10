@@ -1,4 +1,4 @@
-package main.java.fintech.modelo;
+package fintech.modelo;
 
 public class Billetera {
     private String idBilletera;
